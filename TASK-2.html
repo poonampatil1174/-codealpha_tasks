@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-Do List</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #fff3e0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .container {
+            background: #ee9a80f8;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 90%;
+            max-width: 400px;
+            text-align: center;
+        }
+        .input-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+        input {
+            width: 100%;
+            padding: 8px;
+            border: 2px solid #e7bea8;
+            border-radius: 5px;
+            margin-bottom: 10px;
+        }
+        button {
+            width: 100%;
+            padding: 8px;
+            margin: 5px 0;
+            cursor: pointer;
+            border: none;
+            border-radius: 5px;
+            color: white;
+            font-weight: bold;
+            background-color: #9b5835;
+        }
+        button:hover {
+            background-color: #6e2d1a;
+        }
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+        li {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: #ffb74d;
+            padding: 8px;
+            margin-top: 5px;
+            border-radius: 5px;
+        }
+        .important {
+            background-color: #ff7043 !important;
+            font-weight: bold;
+        }
+        .task-buttons {
+            display: flex;
+            gap: 5px;
+        }
+        @media (max-width: 600px) {
+            .container {
+                width: 95%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Task Manager</h1>
+        <div class="input-container">
+            <input type="text" id="taskInput" placeholder="Enter a task...">
+            <button id="addTask">Add</button>
+        </div>
+        <ul id="taskList"></ul>
+        <button id="saveTasks">Save Tasks</button>
+        <button id="clearTasks">Remove All</button>
+        <button id="showImportant">Show Important</button>
+        <button id="showSaved">Show Saved</button>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
